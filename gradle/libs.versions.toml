@@ -1,0 +1,137 @@
+[versions]
+agp = "8.9.1"
+compose-bom = "2025.04.00"
+androidx-activityCompose = "1.10.1"
+compose-plugin = "1.7.1"
+composeUiTooling = "1.7.8"
+coreSplashscreen = "1.0.1"
+desugar_jdk_libs = "2.1.5"
+detekt = "1.23.8"
+mockk = "1.13.17"
+statelyConcurrency = "2.1.0"
+testCoreKtx = "1.6.1"
+coroutines = "1.10.2"
+kermit = "2.0.5"
+koalaplotCore = "0.6.4"
+koin = "4.0.4"
+koinCompose = "4.0.4"
+kotlin = "2.1.20"
+kotlinxDatetime = "0.6.2"
+kotlinxSerialization = "1.8.1"
+ktor = "3.1.2"
+jSystemThemeDetector = "3.9.1"
+robolectric = "4.14.1"
+kover = "0.9.1"
+ktlint = "12.2.0"
+leakcanary = "2.14"
+lifecycleRuntimeCompose = "2.8.7"
+material3WindowSizeClassMultiplatform = "0.5.0"
+multiplatformSettings = "1.3.0"
+navigationCompose = "2.8.0-alpha10"
+buildconfig = "5.6.2"
+securityCrypto = "1.1.0-alpha07"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+uiautomator = "2.3.0"
+benchmarkMacroJunit4 = "1.3.4"
+baselineprofile = "1.3.4"
+profileinstaller = "1.4.1"
+skiko = "0.9.16"
+room = "2.7.0"
+ksp = "2.1.20-2.0.0"
+sqlite = "2.5.0"
+slf4j = "2.0.17"
+apollographql = "4.1.1"
+apollographqlMockServer = "0.1.1"
+apollographqlKotlinxDateTime = "0.0.4"
+testRules = "1.6.1"
+junit5 = "5.8.2"
+# App configurations, not dependencies
+versionCode = "16"
+versionName = "2.4.0"
+android-minSdk = "26"
+android-targetSdk = "34"
+android-compileSdk = "35"
+
+
+[libraries]
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
+kermit-koin = { group = "co.touchlab", name = "kermit-koin", version.ref = "kermit" }
+koalaplot-core = { group = "io.github.koalaplot", name = "koalaplot-core", version.ref = "koalaplotCore" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx-activityCompose" }
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "composeUiTooling" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "composeUiTooling" }
+androidx-test-core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "testCoreKtx" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-sqlite-bundled = { group = "androidx.sqlite", name = "sqlite-bundled", version.ref = "sqlite" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-darwin = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
+ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "coroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+material3-windowsizeclass-multiplatform = { group = "dev.chrisbanes.material3", name = "material3-window-size-class-multiplatform", version.ref = "material3WindowSizeClassMultiplatform" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-jvm = { group = "io.insert-koin", name = "koin-core-jvm", version.ref = "koin" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koinCompose" }
+leakcanary-android = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leakcanary" }
+multiplatform-settings = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "multiplatformSettings" }
+navigation-compose = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleRuntimeCompose" }
+stately-concurrency = { module = "co.touchlab:stately-concurrency", version.ref = "statelyConcurrency" }
+themedetector = { group = "com.github.Dansoftowner", name = "jSystemThemeDetector", version.ref = "jSystemThemeDetector" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-uiautomator = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
+androidx-benchmark-macro-junit4 = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "benchmarkMacroJunit4" }
+androidx-profileinstaller = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "profileinstaller" }
+slf4j = { group = "org.slf4j", name = "slf4j-simple", version.ref = "slf4j" }
+apollo-runtime = { group = "com.apollographql.apollo", name = "apollo-runtime", version.ref = "apollographql" }
+apollo-adapters-kotlinx-datetime = { group = "com.apollographql.adapters", name = "apollo-adapters-kotlinx-datetime", version.ref = "apollographqlKotlinxDateTime" }
+apollo-testing-support = { group = "com.apollographql.apollo", name = "apollo-testing-support", version.ref = "apollographql" }
+apollo-mockserver = { group = "com.apollographql.mockserver", name = "apollo-mockserver", version.ref = "apollographqlMockServer" }
+ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-test-rules = { group = "androidx.test", name = "rules", version.ref = "testRules" }
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit5" }
+junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit5" }
+# For Renovate only
+skiko-macos = { group = "org.jetbrains.skiko", name = "skiko-awt-runtime-macos-arm64", version.ref = "skiko" }
+skiko-windows = { group = "org.jetbrains.skiko", name = "skiko-awt-runtime-windows-x64", version.ref = "skiko" }
+skiko-linux = { group = "org.jetbrains.skiko", name = "skiko-awt-runtime-linux-x64", version.ref = "skiko" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+android-test = { id = "com.android.test", version.ref = "agp" }
+androidxRoom = { id = "androidx.room", version.ref = "room" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+kotlinPowerAssert = { id = "org.jetbrains.kotlin.plugin.power-assert", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinxKover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+gradleKtlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildconfig" }
+baselineprofile = { id = "androidx.baselineprofile", version.ref = "baselineprofile" }
+apollographql = { id = "com.apollographql.apollo", version.ref = "apollographql" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }

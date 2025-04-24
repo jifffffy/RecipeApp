@@ -1,0 +1,17 @@
+<!--
+  ~ Material Design Icons
+  - https://github.com/material-icons/material-icons
+  ~ License: Apache 2.0
+  -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M21,11a9,9 0,0 0,-18 0c0,3.92 2.51,7.24 6,8.48L9,22h2v-2.06a8.262,8.262 0,0 0,2 0L13,22h2v-2.52c3.49,-1.24 6,-4.56 6,-8.48zM12,18c-3.86,0 -7,-3.14 -7,-7s3.14,-7 7,-7s7,3.14 7,7s-3.14,7 -7,7z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M8,7h8v2L8,9zM12.75,10l-3,3L11,14.25L9.75,15.5l1.5,1.5l3,-3L13,12.75l1.25,-1.25z" />
+</vector>

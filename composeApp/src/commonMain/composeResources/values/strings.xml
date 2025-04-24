@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">OctoMeter</string>
+    <string name="title">Some title</string>
+    <string name="navigation_onboarding">Onboarding</string>
+    <string name="navigation_usage">Usage</string>
+    <string name="navigation_tariffs">Tariffs</string>
+    <string name="navigation_agile">Agile</string>
+    <string name="navigation_account">Account</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+    <string name="update">Update</string>
+    <string name="cancel">Cancel</string>
+    <string name="no">No</string>
+
+    <!-- Content Descriptions -->
+    <string name="content_description_navigation_bar">Navigation Bar</string>
+    <string name="content_description_navigation_rail">Navigation Rail</string>
+    <string name="content_description_previous_period">Navigate to the previous period</string>
+    <string name="content_description_next_period">Navigate to the next period</string>
+    <string name="content_description_dismiss_this_pane">Dismiss this pane</string>
+    <string name="content_description_navigate_back">Navigate back</string>
+    <string name="content_description_edit_postcode">Edit postcode</string>
+    <string name="content_description_clear">Clear</string>
+</resources>
