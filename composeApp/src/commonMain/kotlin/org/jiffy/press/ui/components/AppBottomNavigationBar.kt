@@ -65,7 +65,7 @@ fun AppBottomNavigationBar(
                 icon = {
                     Icon(
                         modifier = Modifier.size(size = dimension.navigationIconSize),
-                        painter = painterResource(resource = item.iconResId),
+                        imageVector = item.icon,
                         contentDescription = null,
                     )
                 },

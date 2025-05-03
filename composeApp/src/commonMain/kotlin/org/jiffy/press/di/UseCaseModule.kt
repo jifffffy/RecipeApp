@@ -3,13 +3,13 @@ package org.jiffy.press.di
 import org.jiffy.press.domain.usecase.FilterByAreaUseCase
 import org.jiffy.press.domain.usecase.FilterByCategoryUseCase
 import org.jiffy.press.domain.usecase.FilterByIngredientUseCase
-import org.jiffy.press.domain.usecase.ListAllAreaUseCase
-import org.jiffy.press.domain.usecase.ListAllCategoriesUseCase
-import org.jiffy.press.domain.usecase.ListAllIngredientsUseCase
-import org.jiffy.press.domain.usecase.ListAllMealsByFirstLetterUseCase
+import org.jiffy.press.domain.usecase.GettAllAreaUseCase
+import org.jiffy.press.domain.usecase.GetAllCategoriesUseCase
+import org.jiffy.press.domain.usecase.GettAllIngredientsUseCase
+import org.jiffy.press.domain.usecase.GetMealsByTextUseCase
 import org.jiffy.press.domain.usecase.LookupASingleRandomMealUseCase
 import org.jiffy.press.domain.usecase.LookupFullMealDetailsByIdUseCase
-import org.jiffy.press.domain.usecase.SearchMealByNameUseCase
+import org.jiffy.press.domain.usecase.GetTopRecommendationsUseCase
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
@@ -34,25 +34,25 @@ val useCaseModule = module {
         )
     }
     factory {
-        ListAllAreaUseCase(
+        GettAllAreaUseCase(
             mealsRepository = get(),
             dispatcher = get(named("DefaultDispatcher")),
         )
     }
     factory {
-        ListAllCategoriesUseCase(
+        GetAllCategoriesUseCase(
             mealsRepository = get(),
             dispatcher = get(named("DefaultDispatcher")),
         )
     }
     factory {
-        ListAllIngredientsUseCase(
+        GettAllIngredientsUseCase(
             mealsRepository = get(),
             dispatcher = get(named("DefaultDispatcher")),
         )
     }
     factory {
-        ListAllMealsByFirstLetterUseCase(
+        GetMealsByTextUseCase(
             mealsRepository = get(),
             dispatcher = get(named("DefaultDispatcher")),
         )
@@ -70,7 +70,7 @@ val useCaseModule = module {
         )
     }
     factory {
-        SearchMealByNameUseCase(
+        GetTopRecommendationsUseCase(
             mealsRepository = get(),
             dispatcher = get(named("DefaultDispatcher")),
         )

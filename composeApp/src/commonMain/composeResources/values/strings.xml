@@ -2,15 +2,17 @@
     <string name="app_name">OctoMeter</string>
     <string name="title">Some title</string>
     <string name="navigation_onboarding">Onboarding</string>
-    <string name="navigation_usage">Usage</string>
-    <string name="navigation_tariffs">Tariffs</string>
-    <string name="navigation_agile">Agile</string>
-    <string name="navigation_account">Account</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_search">Search</string>
+    <string name="navigation_favorites">Favorites</string>
+    <string name="navigation_detail">Detail</string>
+    <string name="navigation_profile">Profile</string>
     <string name="ok">OK</string>
     <string name="retry">Retry</string>
     <string name="update">Update</string>
     <string name="cancel">Cancel</string>
     <string name="no">No</string>
+    <string name="header_title">Daily Inspiration</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_navigation_bar">Navigation Bar</string>

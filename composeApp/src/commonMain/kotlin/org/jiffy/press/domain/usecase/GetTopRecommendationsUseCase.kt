@@ -6,13 +6,14 @@ import kotlinx.coroutines.withContext
 import org.jiffy.press.domain.model.meal.Meal
 import org.jiffy.press.domain.repository.MealsRepository
 
-class ListAllMealsByFirstLetterUseCase(
+
+class GetTopRecommendationsUseCase(
     private val mealsRepository: MealsRepository,
-    private val dispatcher: CoroutineDispatcher = Dispatchers.Default
+    private val dispatcher: CoroutineDispatcher = Dispatchers.Default,
 ) {
-    suspend operator fun invoke(firstLetter: String): Result<List<Meal>> {
+    suspend operator fun invoke(): Result<List<Meal>> {
         return withContext(dispatcher) {
-            mealsRepository.search(query = "f", value = firstLetter)
+            mealsRepository.search("f", "c")
         }
     }
 }

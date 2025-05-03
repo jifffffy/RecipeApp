@@ -2,6 +2,9 @@ package org.jiffy.press.di
 
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.logging.LogLevel
+import io.ktor.client.plugins.logging.Logger
+import io.ktor.client.plugins.logging.Logging
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
@@ -15,6 +18,14 @@ const val BASE_URL = "https://www.themealdb.com/api/json/v1"
 val ktorModule = module {
     single {
         HttpClient(engine = get()) {
+            install(Logging) {
+                logger = object : Logger {
+                    override fun log(message: String) {
+                        co.touchlab.kermit.Logger.i { message }
+                    }
+                }
+                level = LogLevel.INFO
+            }
             install(ContentNegotiation) {
                 json(
                     Json {

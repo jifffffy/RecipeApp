@@ -7,8 +7,10 @@ import co.touchlab.kermit.koin.KermitKoinLogger
 import org.jiffy.press.di.dataSourceModule
 import org.jiffy.press.di.dispatcherModule
 import org.jiffy.press.di.ktorModule
+import org.jiffy.press.di.platformModule
 import org.jiffy.press.di.repositoryModule
 import org.jiffy.press.di.useCaseModule
+import org.jiffy.press.di.viewModelModule
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 import org.koin.dsl.koinApplication
@@ -24,11 +26,13 @@ fun main()  {
     }
     startKoin {
         modules(
-            dataSourceModule,
+            platformModule,
             dispatcherModule,
             ktorModule,
             repositoryModule,
             useCaseModule,
+            viewModelModule,
+            dataSourceModule,
         )
     }
     application {

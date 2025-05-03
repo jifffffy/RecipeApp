@@ -1,6 +1,7 @@
 package org.jiffy.press.domain.model.meal
 
 import org.jiffy.press.domain.model.ingredient.Ingredient
+import kotlin.time.Duration
 
 data class Meal(
     val id: String,
@@ -16,5 +17,7 @@ data class Meal(
     val source: String? = "",
     val imageSource: String? = "",
     val creativeCommonsConfirmed: Boolean? = false,
-    val dateModified: String? = ""
+    val dateModified: String? = "",
+    val duration: String = "",
+    val rating: Int = 0,
 )

@@ -5,25 +5,25 @@ import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.parameters
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.withContext
 import org.jiffy.press.data.source.network.dto.*
 import org.jiffy.press.domain.exceptions.HttpException
-import kotlin.coroutines.CoroutineContext
 
 class MealsEndpoint(
     baseUrl: String,
     private val httpClient: HttpClient,
-    private val dispatcher: CoroutineContext = Dispatchers.IO
+    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
 ) {
     private val endpointUrl = "$baseUrl/1"
 
     suspend fun search(query: String, value: String): MealsApiResponse? =
         safeRequest {
             httpClient.get("$endpointUrl/search.php") {
-                parameters {
-                    append(query, value)
+                url {
+                    parameters.append(query, value)
                 }
             }.parseResponse()
         }
@@ -31,7 +31,9 @@ class MealsEndpoint(
     suspend fun lookup(idMeal: String): MealsApiResponse? =
         safeRequest {
             httpClient.get("$endpointUrl/lookup.php") {
-                parameters { append("i", idMeal) }
+                url {
+                    parameters.append("i", idMeal)
+                }
             }.parseResponse()
         }
 
@@ -48,28 +50,36 @@ class MealsEndpoint(
     suspend fun filter(query: String, value: String): FilterMealsApiResponse? =
         safeRequest {
             httpClient.get("$endpointUrl/filter.php") {
-                parameters { append(query, value) }
+                url {
+                    parameters.append(query, value)
+                }
             }.parseResponse<FilterMealsApiResponse>()
         }
 
     suspend fun listCategories(): CategoriesApiResponse? =
         safeRequest {
             httpClient.get("$endpointUrl/list.php") {
-                parameters { append(LIST_CATEGORIES, LIST_PARAM) }
+                url {
+                    parameters.append("c", "list")
+                }
             }.parseResponse()
         }
 
     suspend fun listAreas(): AreasApiResponse? =
         safeRequest {
             httpClient.get("$endpointUrl/list.php") {
-                parameters { append(LIST_AREAS, LIST_PARAM) }
+                url {
+                    parameters.append("a", "list")
+                }
             }.parseResponse()
         }
 
     suspend fun listIngredients(): IngredientsApiResponse? =
         safeRequest {
             httpClient.get("$endpointUrl/list.php") {
-                parameters { append(LIST_INGREDIENTS, LIST_PARAM) }
+                url {
+                    parameters.append("i", "list")
+                }
             }.parseResponse()
         }
 
@@ -90,11 +100,4 @@ class MealsEndpoint(
         } ?: throw HttpException(status.value)
     }
 
-
-    companion object {
-        private const val LIST_PARAM = "list"
-        private const val LIST_CATEGORIES = "c"
-        private const val LIST_AREAS = "a"
-        private const val LIST_INGREDIENTS = "i"
-    }
 }

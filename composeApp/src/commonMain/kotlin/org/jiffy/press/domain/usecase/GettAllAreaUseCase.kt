@@ -5,7 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.jiffy.press.domain.repository.MealsRepository
 
-class ListAllAreaUseCase(
+class GettAllAreaUseCase(
     private val mealsRepository: MealsRepository,
     private val dispatcher: CoroutineDispatcher = Dispatchers.Default
 ) {

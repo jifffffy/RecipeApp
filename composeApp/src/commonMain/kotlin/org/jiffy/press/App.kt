@@ -148,21 +148,22 @@ fun App(
                             )
                         }
 
-                        val actionLabel = stringResource(Res.string.ok)
-                        AppNavigationHost(
-                            modifier = Modifier.fillMaxSize(),
-                            navController = navController,
-                            lastDoubleTappedNavItem = lastDoubleTappedNavItem.value,
-                            onShowSnackbar = { errorMessageText ->
-                                snackbarHostState.showSnackbar(
-                                    message = errorMessageText,
-                                    actionLabel = actionLabel,
-                                    duration = SnackbarDuration.Long,
-                                )
-                            },
-                            onScrolledToTop = { lastDoubleTappedNavItem.value = null },
-                        )
                     }
+
+                    val actionLabel = stringResource(Res.string.ok)
+                    AppNavigationHost(
+                        modifier = Modifier.fillMaxSize(),
+                        navController = navController,
+                        lastDoubleTappedNavItem = lastDoubleTappedNavItem.value,
+                        onShowSnackbar = { errorMessageText ->
+                            snackbarHostState.showSnackbar(
+                                message = errorMessageText,
+                                actionLabel = actionLabel,
+                                duration = SnackbarDuration.Long,
+                            )
+                        },
+                        onScrolledToTop = { lastDoubleTappedNavItem.value = null },
+                    )
                 }
 
             }

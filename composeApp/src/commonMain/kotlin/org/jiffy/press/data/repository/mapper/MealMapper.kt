@@ -4,6 +4,7 @@ import org.jiffy.press.data.source.network.dto.FilterMealsApiResponse
 import org.jiffy.press.data.source.network.dto.MealsApiResponse
 import org.jiffy.press.domain.model.ingredient.Ingredient
 import org.jiffy.press.domain.model.meal.Meal
+import kotlin.random.Random
 
 // Mapper function to convert MealsApiResponse to a list of Meal objects
 fun MealsApiResponse.mapToDomain(): List<Meal> {
@@ -33,6 +34,10 @@ fun MealsApiResponse.mapToDomain(): List<Meal> {
             .map { (ingredient, measure) -> Ingredient(ingredient!!, measure!!) }
 
         val tags = mealResponse.strTags?.split(",")?.filter { it.isNotEmpty() }
+        val regex = "\\d+\\s*minutes".toRegex()
+        val matches = mealResponse.strInstructions?.let {
+            regex.find(it)
+        }
 
         Meal(
             id = mealResponse.idMeal,
@@ -48,7 +53,9 @@ fun MealsApiResponse.mapToDomain(): List<Meal> {
             source = mealResponse.strSource.orEmpty(),
             imageSource = mealResponse.strImageSource.orEmpty(),
             creativeCommonsConfirmed = mealResponse.strCreativeCommonsConfirmed?.toBooleanStrictOrNull(),
-            dateModified = mealResponse.dateModified.orEmpty()
+            dateModified = mealResponse.dateModified.orEmpty(),
+            duration = matches?.value ?: "20minutes",
+            rating = Random.nextInt(1, 6)
         )
     }
 }
